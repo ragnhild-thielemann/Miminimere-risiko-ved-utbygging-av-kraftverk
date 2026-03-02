@@ -3,7 +3,7 @@
 # Indroduksjon
 
 
-![Lagrange_problem](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/images/vindmøller.png)
+![Lagrange_problem](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/blob/main/images/vindmøller.png)
 
 
 Verden står overfor en nødvendig klimaomstilling som krever store investeringer i fornybare energikilder. I motsetning til tradisjonelle kraftverk basert på kull eller olje, er det vanskelig å kontrollere strømproduksjonen fra fornybare kilder. For eksempel produserer vindkraftverk mer strøm når det blåser, og mindre når vinden stilner. Dette skaper utfordringer for å opprettholde en stabil energiforsyning til både husholdninger og bedrifter, siden strøm er en ferskvare med begrensede muligheter for lagring.
@@ -55,7 +55,7 @@ altså differansen mellom produsert kraft og etterspurt kraft ved tidspunktet $i
 Dersom $D_{i}$ < 0 oppstår det derimot et kraftunderskudd. Når tilbudet ikke dekker etterspørselen, presses prisene oppover, noe vi så tydelig under energikrisen vinteren 2021–2022. Russlands invasjon av Ukraina resulterte i at Europa sanksjonerte russiske gassleveranser, samtidig som det var lite vind. Når både gassforsyningen sviktet og vindkraftproduksjonen var svak, oppstod det et betydelig negativt $D_{i}$ , noe som førte til kraftig økning i strømprisene.
 
 
-![Lagrange_problem](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/images/EU.png)
+![Lagrange_problem](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/blob/main/images/EU.png)
 
 
 Mimimeringsproblemet vi øsner å løse er at det totale avviket mellom $R_{\text{i}}$ og $e_{\text{i}}$ , altså at total strømproduksjon er likest murlig etterspørselen ved etthvert tidspunkt $i$ . Da R = $w^{T}$ r , vil vi finne den allokeringen av inveseringer i vindparker, slik at utrykket
