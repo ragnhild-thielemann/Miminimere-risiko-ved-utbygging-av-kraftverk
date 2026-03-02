@@ -44,10 +44,9 @@ som er et enklere utrykk å minimere. Fra utledningen av [kovariansen](https://g
 $$ Var(R) = w^{T} C w $$ 
 
 
+Dette gir 
 
-
-
-
+$$ D = 
 ### Dette kan ansees som en lagrangeproblem med der vi ønsker å minimere 
 
  - E = energibehovet vi ønsker å dekke ved et gitt tidspunkt $t$. 
