@@ -50,11 +50,13 @@ altså differansen mellom produsert kraft og etterspurt kraft ved tidspunktet $i
 
 Dersom $D_{i}$ < 0 oppstår det derimot et kraftunderskudd. Når tilbudet ikke dekker etterspørselen, presses prisene oppover, noe vi så tydelig under energikrisen vinteren 2021–2022. Russlands invasjon av Ukraina resulterte i at Europa sanksjonerte russiske gassleveranser, samtidig som det var lite vind. Når både gassforsyningen sviktet og vindkraftproduksjonen var svak, oppstod det et betydelig negativt $D_{i}$ , noe som førte til kraftig økning i strømprisene.
 
-Mimimeringsproblemet vi øsner å løse er at det totale avviket mellom $R_{\text{i}}$ og $e_{\text{i}}$ , altså at total strømproduksjon er likest murlig etterspørselen ved etthvert tidspunkt $i$ . Da R = $w^{T}$ r , vil vi finne den allokeringen av inveseringer i vindparker, slik at 
+Mimimeringsproblemet vi øsner å løse er at det totale avviket mellom $R_{\text{i}}$ og $e_{\text{i}}$ , altså at total strømproduksjon er likest murlig etterspørselen ved etthvert tidspunkt $i$ . Da R = $w^{T}$ r , vil vi finne den allokeringen av inveseringer i vindparker, slik at utrykket
 
 $$
 D = \frac{1}{n} \sum_{i=1}^{n} (r_i - e_i)^2
-$$ blir minst murlig
+$$ 
+
+blir minst murlig
 
 
 
