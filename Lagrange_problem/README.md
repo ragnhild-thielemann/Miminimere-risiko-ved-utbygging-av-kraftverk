@@ -28,6 +28,7 @@ $$ k(w) = w^{T} = \kappa $$
 
 Man kan vise at 
 
+
 $$
 \frac{1}{n} \sum_{i=1}^{n} (r_i - e_i)^2
 =
@@ -38,7 +39,8 @@ $$
 \mathrm{Var}(E)
 $$
 
-som er et enklere utrykk å minimere. Fra utledningen av [kovariansen](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/blob/main/images/EU.png) til strømproduksjonen ved ulike vindkraftverk $r_{d}$ , så vi at den totale variansen $Var(R)$ var gitt ved 
+
+som er et enklere utrykk å minimere. Fra utledningen av [kovariansen](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/tree/main/Kovarians) til strømproduksjonen ved ulike vindkraftverk $r_{d}$ , så vi at den totale variansen $Var(R)$ var gitt ved 
 
 
 

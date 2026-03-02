@@ -46,11 +46,12 @@ Dette er selve kjernen i Markowitz-tankegangen anvendt på inversteringer i forn
 #### Geografisk spredning reduserer samlet risiko fordi kovariansene er lavere enn variansene. 
 
 
-### Variansen til den totale vindparken R
+## Variansen til den totale vindparken R
 
 Når vi skal finne variansen til den totale vindkraftporteføljen, må vi ta hensyn til både hvor mye vi investerer i hver park og hvordan produksjonen samvarierer mellom parkene.
 
 **w** er vektvektoren for investeringene, og C er kovariansmatrisen for produksjonen. Variansen til den totale produksjoeen er gitt ved 
+
 
 $$
 \mathrm{Var}(R_{tot})
@@ -59,7 +60,9 @@ $$
 w_i w_j \, \mathrm{Cov}(r_i, r_j)
 $$
 
+
 som tilsvarer skalaproduktet
+
 
 $$
 \mathrm{Var}(R_{tot}) = \mathbf{w}^{\top} C \mathbf{w}
