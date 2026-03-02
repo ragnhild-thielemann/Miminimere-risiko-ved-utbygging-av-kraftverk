@@ -37,17 +37,25 @@ Da strøm har svært begrensede murligheter for oppbevaring, ønsker vi allokeri
 
  - $E$ er befolkningenes etterspørsel etter kraft ved tidspunktet $t$. Vi anser variabelen som usikker, da etterspørselen etter strøm varierer med tiden på døgnet, temperaturen ute og vedprisene. 
  - $\mu_{\text{e}}$ er  forventet etterspørsel etter strøm, basert på historiske data. 
- - $\sigma{\text{e}}^2$ er variansen i etterspøselen, basert på historiske data. 
+ - $\sigma_{\text{e}}^2$ er variansen i etterspøselen, basert på historiske data. 
  - **w** er vektoren som utrykker inversteringene i hvert kraftverk $d$ .
  - R = $w^{T}$ r er total strømproduksjon. 
 
 Vi betegner differansen $D$ i tidspunktet $i$ som 
 
-$$D = r_{\text{i}} - e_{\text{i}} $$
+$$D = R_{\text{i}} - e_{\text{i}} $$
 
-Altså differansen mellom produsert kraft og etterspurt kraft ved tidspunktet $i$ = 1,2,3,4 ...n . Denne størrelsen uttrykker ubalansen i kraftmarkedet til enhver tid. Dersom $D_{i}$ > 0, vil det produseres med strøm enn det markedet etterspør, og strømmen må "kastes på havet", da det er begrenset med langringsmurligheter for strøm. 
+
+altså differansen mellom produsert kraft og etterspurt kraft ved tidspunktet $i$ = 1,2,3,4 ...n . Denne størrelsen uttrykker ubalansen i kraftmarkedet til enhver tid. Dersom $D_{i}$ > 0, vil det produseres med strøm enn det markedet etterspør, og strømmen må "kastes på havet", da det er begrenset med langringsmurligheter for strøm. 
 
 Dersom $D_{i}$ < 0 oppstår det derimot et kraftunderskudd. Når tilbudet ikke dekker etterspørselen, presses prisene oppover, noe vi så tydelig under energikrisen vinteren 2021–2022. Russlands invasjon av Ukraina resulterte i at Europa sanksjonerte russiske gassleveranser, samtidig som det var lite vind. Når både gassforsyningen sviktet og vindkraftproduksjonen var svak, oppstod det et betydelig negativt $D_{i}$ , noe som førte til kraftig økning i strømprisene.
+
+Mimimeringsproblemet vi øsner å løse er at det totale avviket mellom $R_{\text{i}}$ og $e_{\text{i}}$ , altså at total strømproduksjon er likest murlig etterspørselen ved etthvert tidspunkt $i$ . Da R = $w^{T}$ r , vil vi finne den allokeringen av inveseringer i vindparker, slik at 
+
+$$
+D = \frac{1}{n} \sum_{i=1}^{n} (r_i - e_i)^2
+$$ blir minst murlig
+
 
 
  - $\mu_{\text{e}}$ = Forventet verdi for energibehovet vi ønsker å dekke. Dette er et estimat basert på historiske data, og er en estimert konstant. 
