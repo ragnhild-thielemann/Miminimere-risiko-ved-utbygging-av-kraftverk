@@ -2,13 +2,15 @@
 
 # Indroduksjon
 
+![Lagrange_problem](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/images/vindmøller.png)
+
 Verden står overfor en nødvendig klimaomstilling som krever store investeringer i fornybare energikilder. I motsetning til tradisjonelle kraftverk basert på kull eller olje, er det vanskelig å kontrollere strømproduksjonen fra fornybare kilder. For eksempel produserer vindkraftverk mer strøm når det blåser, og mindre når vinden stilner. Dette skaper utfordringer for å opprettholde en stabil energiforsyning til både husholdninger og bedrifter, siden strøm er en ferskvare med begrensede muligheter for lagring.
 
 Værforhold som vind og skydekke varierer geografisk, og produksjonen kan derfor svinge fra sted til sted. Langs kysten blåser det ofte mer enn innlandet, og forholdene i Nord-Norge kan være svært ulike fra Sør-Norge.
 
 For å møte disse utfordringene kan vi anvende Markowitz’ porteføljeteori på energiinvesteringer. Målet er å finne en optimal kombinasjon av fornybare kraftverk som høy strømproduksjon og variasjon, slik at vi sikrer høyest mulig, stabil strømproduksjon over tid.
 
-### Forventet strømproduksjon
+## Forventet strømproduksjon
 
 
  - **r** = ( $r_{\text{1}}$ , $r_{\text{2}}$ ... $r_{\text{d}}$ ) $^{T}$ er en vektor, der hver indeks  $r_{\text{d}}$ represetnerer for $kapasitetsfaktoren$ for vindparken i lokasjon  $d$ . 
@@ -49,6 +51,8 @@ $$D = R_{\text{i}} - e_{\text{i}} $$
 altså differansen mellom produsert kraft og etterspurt kraft ved tidspunktet $i$ = 1,2,3,4 ...n . Denne størrelsen uttrykker ubalansen i kraftmarkedet til enhver tid. Dersom $D_{i}$ > 0, vil det produseres med strøm enn det markedet etterspør, og strømmen må "kastes på havet", da det er begrenset med langringsmurligheter for strøm. 
 
 Dersom $D_{i}$ < 0 oppstår det derimot et kraftunderskudd. Når tilbudet ikke dekker etterspørselen, presses prisene oppover, noe vi så tydelig under energikrisen vinteren 2021–2022. Russlands invasjon av Ukraina resulterte i at Europa sanksjonerte russiske gassleveranser, samtidig som det var lite vind. Når både gassforsyningen sviktet og vindkraftproduksjonen var svak, oppstod det et betydelig negativt $D_{i}$ , noe som førte til kraftig økning i strømprisene.
+
+![Lagrange_problem](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/images/EU.png)
 
 Mimimeringsproblemet vi øsner å løse er at det totale avviket mellom $R_{\text{i}}$ og $e_{\text{i}}$ , altså at total strømproduksjon er likest murlig etterspørselen ved etthvert tidspunkt $i$ . Da R = $w^{T}$ r , vil vi finne den allokeringen av inveseringer i vindparker, slik at utrykket
 
