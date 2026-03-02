@@ -12,11 +12,19 @@ For å møte disse utfordringene kan vi anvende Markowitz’ porteføljeteori p�
 
  - $\mu_{\text{e}}$ = Forventet verdi for energibehovet vi ønsker å dekke. Dette er et estimat basert på historiske data, og er en estimert konstant. 
 
- - **r** = ($r_{\text{1}}$ , $r_{\text{2}}$ ... $r_{\text{d}$) $^{T}$ vektor for $kapasitetsfaktoren$ for vindkraft i $d$ forskjellige geografiske lokasjoner. Hver indeks  $r_{\text{d}}$ er mye av  kapasiteten hver vindlokasjon klarer å utnytte. 
+ - **r** = ($r_{\text{1}}$ , $r_{\text{2}}$ ... $r_{\text{d}$ ) $^{T}$ er en vektor, der hver indeks  $r_{\text{d}$ represetnerer for $kapasitetsfaktoren$ for vindparken i lokasjon  $d$ . 
  
-  - **w** = vektor, der hver komponent er hvor stor andel av total inversting i vindkraftverkene vi har i hver vinpark. Vi antar at inversteingsviljen er et konstant tall $\kappa$, slik at $(**w**)^{T}$ 1 = $\sum{i=1}^{d}$ = $\kappa$
+  - **w** = ($w_{\text{1}}$ , $w_{\text{2}}$ ... $w_{\text{d}$ ) $^{T}$ . $w_{\text{d}}$ er hvor stor andel av investeringene man har gjort i hver vindpark $d$. 
+  
+  Dette gjør at produksjonen av strøm fra alle vindparkene er gitt ved 
 
-  - vi ønsker å minimere  
+  R = $w^{T}$ r = $\frac{1}{T}\sum_{t=1}^{T} w_{d} r_{d} $
+  
+  Vi antar at myndighetene har et krav om at en viss menge kapasitet med fornybar energi skal instaleres, og vi betegner dette som et konstant tall $\kappa$ . 
+  
+   slik at $w^{T}$ 1 = $\sum{i=1}^{d}$ = $\kappa$ . I motsetning til Markowitz’ porteføljeteori, krever vi at $w_{\text{d}}$ > 0, da det ikke gir mening å ha en negativ vindmølle (negative verdier for  $w_{\text{d}}$ gir i portefølgeinveseringer mening dersom man shorter aksjene. 
+  
+ 
 
 
 
