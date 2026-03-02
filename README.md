@@ -12,13 +12,13 @@ For å møte disse utfordringene kan vi anvende Markowitz’ porteføljeteori p�
 
  - $\mu_{\text{e}}$ = Forventet verdi for energibehovet vi ønsker å dekke. Dette er et estimat basert på historiske data, og er en estimert konstant. 
 
- - **r** = ($r_{\text{1}}$ , $r_{\text{2}}$ ... $r_{\text{d}$ ) $^{T}$ er en vektor, der hver indeks  $r_{\text{d}$ represetnerer for $kapasitetsfaktoren$ for vindparken i lokasjon  $d$ . 
+ - **r** = ( $r_{\text{1}}$ , $r_{\text{2}}$ ... $r_{\text{d}}$ ) $^{T}$ er en vektor, der hver indeks  $r_{\text{d}}$ represetnerer for $kapasitetsfaktoren$ for vindparken i lokasjon  $d$ . 
  
-  - **w** = ($w_{\text{1}}$ , $w_{\text{2}}$ ... $w_{\text{d}$ ) $^{T}$ . $w_{\text{d}}$ er hvor stor andel av investeringene man har gjort i hver vindpark $d$. 
+  - **w** = ($w_{\text{1}}$ , $w_{\text{2}}$ ... $w_{\text{d}}$ ) $^{T}$ . $w_{\text{d}}$ er hvor stor andel av investeringene man har gjort i hver vindpark $d$. 
   
   Dette gjør at produksjonen av strøm fra alle vindparkene er gitt ved 
 
-  R = $w^{T}$ r = $\frac{1}{T}\sum_{t=1}^{T} w_{d} r_{d} $
+  $$ R = w^{T} r = \frac{1}{T}\sum_{t=1}^{T} w_{d} r_{d} $$
   
   Vi antar at myndighetene har et krav om at en viss menge kapasitet med fornybar energi skal instaleres, og vi betegner dette som et konstant tall $\kappa$ . 
   
