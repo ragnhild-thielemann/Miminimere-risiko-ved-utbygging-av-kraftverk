@@ -20,16 +20,16 @@ For å møte disse utfordringene kan vi anvende Markowitz’ porteføljeteori p�
   $$ R = w^{T} r = \sum_{i=1}^{d} w_{i} r_{i} $$
 
 
-  Vi antar at myndighetene har et krav om at en viss menge kapasitet med fornybar energi skal instaleres, og vi betegner dette som et konstant tall $\kappa$. Dermed blir summen av investeringene 
+  Vi antar at myndighetene har et krav om at en viss menge kapasitet med fornybar energi skal instaleres, og vi betegner dette som et konstant $\kappa$. Dermed blir summen av investeringene 
 
-  $$ W = w^{T} 1 = \sum_{i=1}^{d} w_{i} = \kappa $$
+  $$  w^{T} 1 = \sum_{i=1}^{d} w_{i} = \kappa $$
   
 I motsetning til Markowitz’ porteføljeteori, krever vi at $w_{\text{d}}$ > 0, da det ikke gir mening å ha en negativ vindmølle (negative verdier for  $w_{\text{d}}$ gir i portefølgeinveseringer mening dersom man shorter aksjene). 
 
 
   
  
-### Beste allokering av kapasitetene for å møte etterspørselen
+### Beste allokering av vindparker for å minimere sløsing og risiko for å kutte strømnettet
 
 Da strøm har svært begrensede murligheter for oppbevaring, ønsker vi allokeringen som gir minst murlig varians i strømproduksjonen, samtidig som vi møter etterspørselen $E$ etter kraft. 
 
@@ -53,15 +53,16 @@ Dersom $D_{i}$ < 0 oppstår det derimot et kraftunderskudd. Når tilbudet ikke d
 Mimimeringsproblemet vi øsner å løse er at det totale avviket mellom $R_{\text{i}}$ og $e_{\text{i}}$ , altså at total strømproduksjon er likest murlig etterspørselen ved etthvert tidspunkt $i$ . Da R = $w^{T}$ r , vil vi finne den allokeringen av inveseringer i vindparker, slik at utrykket
 
 $$
-D = \frac{1}{n} \sum_{i=1}^{n} (r_i - e_i)^2
+D = \frac{1}{n} \sum_{i=1}^{n} (R_i - e_i)^2
 $$ 
 
-blir minst murlig
+blir minst murlig. Dette er et minimeringsproblem under bibetingelser, som vi løser i mappen 
+[Lagrange_problem](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/Lagrange_problem) . 
+Målet er å minimere den totale risikoen i kraftproduksjonen, gitt et krav til forventet strømproduksjon. Risikoen modelleres ved hjelp av en kovariansmatrise, som beskriver hvordan produksjonen fra ulike vindparker samvarierer.
+
+Den eneste størrelsen vi kan variere, er vektoren **w**, som representerer hvor stor andel kapasitet som bygges i hver vindpark. Optimaliseringen består derfor i å finne den vekten w som minimerer variansen ($w^{T}$ $\Sigma$ w), under bibetingelsen om ønsket produksjonsnivå ( R = $w^{T}$ r ) , samt myndighetens og næringslivets vilje til investeringer ( $w^{T}$ = $\kappa$ ) . 
 
 
 
- - $\mu_{\text{e}}$ = Forventet verdi for energibehovet vi ønsker å dekke. Dette er et estimat basert på historiske data, og er en estimert konstant. 
 
-### Dette kan ansees som en lagrangeproblem med der vi ønsker å minimere 
 
- - E = energibehovet vi ønsker å dekke ved et gitt tidspunkt $t$. 
