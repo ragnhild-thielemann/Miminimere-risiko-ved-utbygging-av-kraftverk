@@ -16,13 +16,19 @@ For å møte disse utfordringene kan vi anvende Markowitz’ porteføljeteori p�
  
   - **w** = ($w_{\text{1}}$ , $w_{\text{2}}$ ... $w_{\text{d}}$ ) $^{T}$ . $w_{\text{d}}$ er hvor stor andel av investeringene man har gjort i hver vindpark $d$. 
   
-  Dette gjør at produksjonen av strøm fra alle vindparkene er gitt ved 
+  Dette gjør at total strømproduksjon fra alle vindparkene er gitt ved 
 
-  $$ R = w^{T} r = \frac{1}{T}\sum_{t=1}^{T} w_{d} r_{d} $$
+  $$ R = w^{T} r = \sum_{i=1}^{d} w_{i} r_{i} $$
+
+
   
-  Vi antar at myndighetene har et krav om at en viss menge kapasitet med fornybar energi skal instaleres, og vi betegner dette som et konstant tall $\kappa$ . 
+  Vi antar at myndighetene har et krav om at en viss menge kapasitet med fornybar energi skal instaleres, og vi betegner dette som et konstant tall $\kappa$ . Dermed blir summen av investeringene 
+
+  $$ W = w^{T} 1 = \sum_{i=1}^{d} w_{i} = \kappa $$
   
-   slik at $w^{T}$ 1 = $\sum{i=1}^{d}$ = $\kappa$ . I motsetning til Markowitz’ porteføljeteori, krever vi at $w_{\text{d}}$ > 0, da det ikke gir mening å ha en negativ vindmølle (negative verdier for  $w_{\text{d}}$ gir i portefølgeinveseringer mening dersom man shorter aksjene. 
+I motsetning til Markowitz’ porteføljeteori, krever vi at $w_{\text{d}}$ > 0, da det ikke gir mening å ha en negativ vindmølle (negative verdier for  $w_{\text{d}}$ gir i portefølgeinveseringer mening dersom man shorter aksjene). 
+
+
   
  
 
