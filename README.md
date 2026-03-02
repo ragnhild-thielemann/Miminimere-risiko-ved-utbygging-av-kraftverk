@@ -14,10 +14,14 @@ For å møte disse utfordringene kan vi anvende Markowitz’ porteføljeteori p�
 
 ## Forventet strømproduksjon
 
+Vi antar at vi investerer i vindparker på ulike lokasjoner $d$ . 
+
+
+ - **w** = ($w_{\text{1}}$ , $w_{\text{2}}$ ... $w_{\text{d}}$ ) $^{T}$ Vektorens komponenteter $w_{\text{d}}$ viser hvor stor andel av investeringene man har gjort i hver vindpark $d$.
 
  - **r** = ( $r_{\text{1}}$ , $r_{\text{2}}$ ... $r_{\text{d}}$ ) $^{T}$ er en vektor, der hver indeks  $r_{\text{d}}$ represetnerer for $kapasitetsfaktoren$ for vindparken i lokasjon  $d$ . 
  
-  - **w** = ($w_{\text{1}}$ , $w_{\text{2}}$ ... $w_{\text{d}}$ ) $^{T}$ Vektorens komponenteter $w_{\text{d}}$ viser hvor stor andel av investeringene man har gjort i hver vindpark $d$. 
+  
   
   Dette gjør at total strømproduksjon fra alle vindparkene er gitt ved skalarproduktet mellom investeringene i hver enkelt vindpark og kapasitetesfaktoren til vindparken, som gir oss: 
 
@@ -65,7 +69,7 @@ D = \frac{1}{n} \sum_{i=1}^{n} (R_i - e_i)^2
 $$ 
 
 blir minst murlig. Dette er et minimeringsproblem under bibetingelser, som vi løser i mappen 
-[Lagrange_problem](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/Lagrange_problem) . 
+[Lagrange_problem](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/tree/main/Lagrange_problem) . 
 Målet er å minimere den totale risikoen i kraftproduksjonen, gitt et krav til forventet strømproduksjon. Risikoen modelleres ved hjelp av en kovariansmatrise, som beskriver hvordan produksjonen fra ulike vindparker samvarierer.
 
 Den eneste størrelsen vi kan variere, er vektoren **w**, som representerer hvor stor andel kapasitet som bygges i hver vindpark. Optimaliseringen består derfor i å finne den vekten w som minimerer variansen ($w^{T}$ $\Sigma$ w), under bibetingelsen om ønsket produksjonsnivå ( R = $w^{T}$ r ) , samt myndighetens og næringslivets vilje til investeringer ( $w^{T}$ = $\kappa$ ) . 
