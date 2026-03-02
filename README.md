@@ -8,21 +8,19 @@ Værforhold som vind og skydekke varierer geografisk, og produksjonen kan derfor
 
 For å møte disse utfordringene kan vi anvende Markowitz’ porteføljeteori på energiinvesteringer. Målet er å finne en optimal kombinasjon av fornybare kraftverk som høy strømproduksjon og variasjon, slik at vi sikrer høyest mulig, stabil strømproduksjon over tid.
 
-### Konstanter vi kjenner
+### Forventet strømproduksjon
 
- - $\mu_{\text{e}}$ = Forventet verdi for energibehovet vi ønsker å dekke. Dette er et estimat basert på historiske data, og er en estimert konstant. 
 
  - **r** = ( $r_{\text{1}}$ , $r_{\text{2}}$ ... $r_{\text{d}}$ ) $^{T}$ er en vektor, der hver indeks  $r_{\text{d}}$ represetnerer for $kapasitetsfaktoren$ for vindparken i lokasjon  $d$ . 
  
-  - **w** = ($w_{\text{1}}$ , $w_{\text{2}}$ ... $w_{\text{d}}$ ) $^{T}$ . $w_{\text{d}}$ er hvor stor andel av investeringene man har gjort i hver vindpark $d$. 
+  - **w** = ($w_{\text{1}}$ , $w_{\text{2}}$ ... $w_{\text{d}}$ ) $^{T}$ Vektorens komponenteter $w_{\text{d}}$ viser hvor stor andel av investeringene man har gjort i hver vindpark $d$. 
   
-  Dette gjør at total strømproduksjon fra alle vindparkene er gitt ved 
+  Dette gjør at total strømproduksjon fra alle vindparkene er gitt ved skalarproduktet mellom investeringene i hver enkelt vindpark og kapasitetesfaktoren til vindparken, som gir oss: 
 
   $$ R = w^{T} r = \sum_{i=1}^{d} w_{i} r_{i} $$
 
 
-  
-  Vi antar at myndighetene har et krav om at en viss menge kapasitet med fornybar energi skal instaleres, og vi betegner dette som et konstant tall $\kappa$ . Dermed blir summen av investeringene 
+  Vi antar at myndighetene har et krav om at en viss menge kapasitet med fornybar energi skal instaleres, og vi betegner dette som et konstant tall $\kappa$. Dermed blir summen av investeringene 
 
   $$ W = w^{T} 1 = \sum_{i=1}^{d} w_{i} = \kappa $$
   
@@ -31,8 +29,28 @@ I motsetning til Markowitz’ porteføljeteori, krever vi at $w_{\text{d}}$ > 0,
 
   
  
+### Beste allokering av kapasitetene for å møte etterspørselen
+
+Da strøm har svært begrensede murligheter for oppbevaring, ønsker vi allokeringen som gir minst murlig varians i strømproduksjonen, samtidig som vi møter etterspørselen $E$ etter kraft. 
+
+#### Parametere
+
+ - $E$ er befolkningenes etterspørsel etter kraft ved tidspunktet $t$. Vi anser variabelen som usikker, da etterspørselen etter strøm varierer med tiden på døgnet, temperaturen ute og vedprisene. 
+ - $\mu_{\text{e}}$ er  forventet etterspørsel etter strøm, basert på historiske data. 
+ - $\sigma{\text{e}}^2$ er variansen i etterspøselen, basert på historiske data. 
+ - **w** er vektoren som utrykker inversteringene i hvert kraftverk $d$ .
+ - R = $w^{T}$ r er total strømproduksjon. 
+
+Vi betegner differansen $D$ i tidspunktet $i$ som 
+
+$$D = r_{\text{i}} - e_{\text{i}} $$
+
+Altså differansen mellom produsert kraft og etterspurt kraft ved tidspunktet $i$ = 1,2,3,4 ...n . Denne størrelsen uttrykker ubalansen i kraftmarkedet til enhver tid. Dersom $D_{i}$ > 0, vil det produseres med strøm enn det markedet etterspør, og strømmen må "kastes på havet", da det er begrenset med langringsmurligheter for strøm. 
+
+Dersom $D_{i}$ < 0 oppstår det derimot et kraftunderskudd. Når tilbudet ikke dekker etterspørselen, presses prisene oppover, noe vi så tydelig under energikrisen vinteren 2021–2022. Russlands invasjon av Ukraina resulterte i at Europa sanksjonerte russiske gassleveranser, samtidig som det var lite vind. Når både gassforsyningen sviktet og vindkraftproduksjonen var svak, oppstod det et betydelig negativt $D_{i}$ , noe som førte til kraftig økning i strømprisene.
 
 
+ - $\mu_{\text{e}}$ = Forventet verdi for energibehovet vi ønsker å dekke. Dette er et estimat basert på historiske data, og er en estimert konstant. 
 
 ### Dette kan ansees som en lagrangeproblem med der vi ønsker å minimere 
 
