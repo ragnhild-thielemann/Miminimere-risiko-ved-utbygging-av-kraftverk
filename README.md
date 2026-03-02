@@ -10,11 +10,11 @@ For å møte disse utfordringene kan vi anvende Markowitz’ porteføljeteori p�
 
 ### Konstanter vi kjenner
 
- - $\mu_{\text{e}}$ = Forventet verdi for energibehovet vi ønsker å dekke. Dette er et estimat basert på historiske data, og er en konstant vi kjenner. 
+ - $\mu_{\text{e}}$ = Forventet verdi for energibehovet vi ønsker å dekke. Dette er et estimat basert på historiske data, og er en estimert konstant. 
 
- - **r** = vektor for $kapasitetsfaktoren$ for vindkraft i $d$ forskjellige geografiske lokasjoner. Hver indeks vil være $r_{\text{d}}$ vil være hvor mye av  kapasiteten hver vindlokasjon klarer å utnytte. 
+ - **r** = $($r_{\text{1}}$ , $r_{\text{2}}$ ... $r_{\text{d}$)^{T}$ vektor for $kapasitetsfaktoren$ for vindkraft i $d$ forskjellige geografiske lokasjoner. Hver indeks  $r_{\text{d}}$ er mye av  kapasiteten hver vindlokasjon klarer å utnytte. 
  
-  - **w** = vektor, der hver komponent er hvor stor andel av total inversting i vindkraftverkene vi har i hver vinpark. Vi antar at inversteingsviljen er et konstant tall $\kappa$, slik at $**w**^{T}$ $\cdot$ 1 = $\sum{i=1}^{d}$ = $\kappa$
+  - **w** = vektor, der hver komponent er hvor stor andel av total inversting i vindkraftverkene vi har i hver vinpark. Vi antar at inversteingsviljen er et konstant tall $\kappa$, slik at $(**w**)^{T}$ 1 = $\sum{i=1}^{d}$ = $\kappa$
 
   - vi ønsker å minimere  
 
