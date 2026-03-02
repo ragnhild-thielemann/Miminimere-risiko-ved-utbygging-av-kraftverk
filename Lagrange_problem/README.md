@@ -1,54 +1,58 @@
- - $\mu_{\text{e}}$ = Forventet verdi for energibehovet vi ønsker å dekke. Dette er et estimat basert på historiske data, og er en estimert konstant. 
+###
+
+Vi ønsker å minimere avviket mellom produsert strøm og etterspurt strøm, altså minimere parameteren $D$
+
+$$
+D = \frac{1}{n} \sum_{i=1}^{n} (R_i - e_i)^2
+$$ 
+
+
+Den eneste størrelsen vi kan variere, er vektoren **w**, som representerer hvor stor andel kapasitet som bygges i hver vindpark. Optimaliseringen består derfor i å finne vektoren **w** som minimerer variansen $D$, under bibetingelsene om ønsket produksjonsnivå ( R = $w^{T}$ r ) , samt myndighetens og næringslivets vilje til invisteringsvilje i fornybar strøm ( $w^{T}$ = $\kappa$ ).
+
+### Lagrange - oppsett
+
+- **Minimeringsproblem** 
+
+$$ D(w) = \frac{1}{n} \sum_{i=1}^{n} (R_i - e_i)^2 $$
+
+- **Første bibetingelse**
+
+
+$$ h(w) =  w^{T} r = R $$
+
+- **Andre bibetingelse**
+
+$$ k(w) = w^{T} = \kappa $$
+
+### Utregning 
+
+Man kan vise at 
+
+$$
+\frac{1}{n} \sum_{i=1}^{n} (r_i - e_i)^2
+=
+\mathbf{w}^{\top} C \mathbf{w}
++
+(\mathbf{w}^{\top} \bar{r} - \mu_E)^2
++
+\mathrm{Var}(E)
+$$
+
+som er et enklere utrykk å minimere. Fra utledningen av [kovariansen](https://github.com/ragnhild-thielemann/Miminimere-risiko-ved-utbygging-av-kraftverk/blob/main/images/EU.png) til strømproduksjonen ved ulike vindkraftverk $r_{d}$ , så vi at den totale variansen $Var(R)$ var gitt ved 
+
+
+
+$$ Var(R) = w^{T} C w $$ 
+
+
+
+
+
 
 ### Dette kan ansees som en lagrangeproblem med der vi ønsker å minimere 
 
  - E = energibehovet vi ønsker å dekke ved et gitt tidspunkt $t$. 
 
- ## Kovariansmatrisen
- For å finne den allokeringen av vindparker **w** som gir minst mulig avvik mellom etterspørsel og strømproduksjon (minimere parameteren $D$) , må vi først beskrive hvordan produksjonen ved ulike vindparker samvarierer. Dette gjør vi ved å konstruere en kovariansmatrise for produksjonen.
-
- La $r_{i}$ være strømproduksjonen ved vindpark $i$ . Kovaransen mellom vindpark $i$ og $j$ er gitt ved : 
-
- $$
-\text{Cov}(r_i, r_j) = \mathbb{E}[(r_i - \mu_i)(r_j - \mu_j)]
-$$
-
-Dette gir en kovariansmatrise $C$ lik
-
-
-$$
-\Sigma =
-\begin{pmatrix}
-\text{Var}(r_1) & \text{Cov}(r_1,r_2) & \dots & \text{Cov}(r_1,r_d) \\
-\text{Cov}(r_2,r_1) & \text{Var}(r_2) & \dots & \text{Cov}(r_2,r_d) \\
-\vdots & \vdots & \ddots & \vdots \\
-\text{Cov}(r_d,r_1) & \text{Cov}(r_d,r_2) & \dots & \text{Var}(r_d)
-\end{pmatrix}
-$$
-
-Her ligger variansene langs diagonalen, da vi har:
-
-
-$$
-\text{Var}(r_i) = \text{Cov}(r_i,r_i)
-$$
-
-mens elementene utenfor diagonalen er kovarianser mellom ulike vindparker.
-
-### Viktig poeng om diversifisering
-
-Dersom produksjonen ved alle vindparkene hadde variert helt likt – for eksempel dersom vinden økte og falt samtidig overalt – ville kovariansene vært like store som variansene. I så fall ville vi ikke fått noen risikoreduserende effekt av å spre investeringene.
-
-Imidlertid varierer vindforholdene geografisk (for eksempel mellom kyst og innland, eller mellom nord og sør), slik at  kovariansen mellom to parker typisk være lavere enn variansen til hver enkelt park:
-
-
-$$ |\text{Var}(r_i)|< \text{Cov}(r_i,r_i)$$
-
-Dersom produksjonen til og med hadde beveget seg motsatt vei noen ganger (for eksempel høy produksjon ett sted når det er lav produksjon et annet sted), kunne kovariansen blitt enda lavere, eventuelt negativ. Dette reduserer den samlede variansen i porteføljen og gir en mer stabil totalproduksjon.
-
-Dette er selve kjernen i Markowitz-tankegangen anvendt på energisystemet: 
-
-#### Geografisk spredning reduserer samlet risiko fordi kovariansene er lavere enn variansene.
 
 
 For å finne den allokeringen av vindparker **w** som gir minst murlig avvik mellom etterspørselen etter strøm strøm-produksjonen trenger vi først noen et utrykk for kovariansen mellom ulike produksjoner. 
